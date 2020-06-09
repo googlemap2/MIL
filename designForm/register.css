@@ -1,0 +1,13 @@
+input[type=submit]{
+    margin-top: 1em;
+}
+
+.link{
+    margin-top: 0em;
+}
+
+.link a{
+    position: relative;
+    width: 10%;
+    margin: 0.8em;
+}

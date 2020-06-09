@@ -1,0 +1,52 @@
+.header {
+    position: fixed;
+    display: inline-flex;
+    width: 100%;
+    height: 6em;
+    font-family: PressStart2P-Regular;
+    background: var(--color-bg-header);
+    color: var(--color-white);
+    z-index: 999;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h2 {
+    font-size: 2em;
+}
+
+.menu {
+    flex: 1;
+    display: inline-flex;
+}
+
+.menu-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--color-white);
+}
+
+.menu-item:hover {
+    background: var(--color-white);
+}
+
+.menu-item:hover a {
+    color: var(--color-bg-header);
+}
+

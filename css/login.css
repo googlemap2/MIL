@@ -1,0 +1,103 @@
+.wrapper-login::before {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/BackgoundLogin.png");
+    background-position: center;
+    background-size: cover;
+    filter: blur(1em);
+    font-family: BalsamiqSans-Bold;
+}
+
+.imgLogin {
+    position: absolute;
+    width: 12em;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -12%);
+    z-index: 2;
+}
+
+.login-contains {
+    position: absolute;
+    display: inline-block;
+    width: 35em;
+    height: 50em;
+    background: var(--color-bg-header);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: BalsamiqSans-Bold;
+}
+
+.login-contains * {
+    color: var(--color-white);
+}
+
+.login-contains h2 {
+    margin-top: 1.5em;
+    font-size: 4em;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.login-contains span {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-left: 2em;
+}
+
+.input-fix{
+    width: 80%;
+    height: 3em;
+    margin-left: 3em;
+    text-align: left;
+    padding-left: 1em;
+    font-size: 1.2em;
+    border: 0;
+    border-bottom: 2px solid white;
+    background: var(--color-bg-header);
+}
+
+input:focus {
+    outline: none;
+}
+
+.submit-login{
+    display: block;
+    width: 80%;
+    height: 3em;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: 1px solid white;
+    border-radius: 2em;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5em;
+    background: var(--color-bg-header);
+    transition: background 0.2s linear;
+}
+
+.submit-login:hover{
+    cursor: pointer;
+    background: var(--color-white);
+    color:var(--color-bg-header);
+}
+
+.link{
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.link a{
+    display: inline-block;
+    text-decoration: underline;
+    width: 100%;
+    margin-top: 0.2em;
+}

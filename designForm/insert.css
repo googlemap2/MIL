@@ -1,0 +1,81 @@
+.wrapper-insert::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background: url('backgoundInsert.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.insert-contains {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50em;
+    height: 50em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-transparen);
+
+}
+
+
+.title {
+    flex: 1;
+    display: flex;
+    color: var(--color-white);
+    font-family: PressStart2P-Regular;
+    font-size: 2em;
+    background: var(--color-bg-header);
+    align-items: center;
+    justify-content: center;
+}
+
+.info-insert {
+    flex: 9;
+    position: relative;
+    display: inline-block;
+}
+
+.info-insert h2 {
+    font-size: 2em;
+    font-family: SpecialElite-Regular;
+    color: var(--color-white);
+    padding-left: 2em;
+    margin: 0.5em;
+
+}
+
+.info-insert input[type=text] {
+    width: 15em;
+    height: 2em;
+    font-size: 1.8em;
+    margin-left: 2em;
+    text-align: center;
+    color: var(--color-white);
+    background: var(--color-bg-header);
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+input[type=file] {
+    color: var(--color-white);
+    font-size: 1.2em;
+    margin-left: 3em;
+}
+
+input[type=submit] {
+    height: 2em;
+    font-size: 2em;
+}
+
+.info-insert a {
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    color: var(--color-white);
+    text-decoration: underline;
+    margin: 1em 0 0 11em;
+}

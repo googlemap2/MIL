@@ -1,0 +1,13 @@
+.submit-register{
+    margin-top: 1em;
+}
+
+.link-register{
+    margin-top: 0em;
+}
+
+.link-register a{
+    position: relative;
+    width: 10%;
+    margin: 0.8em;
+}

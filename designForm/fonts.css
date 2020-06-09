@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "PressStart2P-Regular";
+    src:url("/fonts/PressStart2P-Regular.ttf")
+}
+
+@font-face{
+    font-family: "BalsamiqSans-Bold";
+    src:url("/fonts/BalsamiqSans-Bold.ttf")
+}
+
+@font-face{
+    font-family: "SpecialElite-Regular";
+    src:url("/fonts/SpecialElite-Regular.ttf")
+}

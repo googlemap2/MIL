@@ -1,0 +1,94 @@
+@import "fonts.css";
+@import "color.css";
+@import "header.css";
+@import "login.css";
+@import "register.css";
+@import "insert.css";
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: calc(1vw + 12px);
+    font-family: myFirstFont;
+}
+
+body {
+    position: relative;
+    display: block;
+    width: 100vw;
+    min-height: 100vh;
+    font-size: 12px;
+
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-milk);
+}
+
+.innerwrap {
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 7em;
+}
+
+.title {
+    display: inline-block;
+    font-size: 2em;
+    padding-left: 1em;
+    font-family: BalsamiqSans-Bold;
+}
+
+.title a{
+    color: var(--color-bg-header);
+}
+
+.contains-music{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.item{
+    position: relative;
+    display: inline-flex;
+    width: 12em;
+    height: 20em;
+    flex-direction: column;
+    margin: 1em;
+    transition:   box-shadow 0.2s linear;
+}
+
+.item:hover{
+    box-shadow: 7px -4px 0px 1px var(--color-bg-header);
+}
+
+.poster{
+    flex: 3;
+    width: 100%;
+}
+
+.song{
+    flex: 1;
+    text-align: center;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
