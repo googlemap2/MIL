@@ -4,6 +4,10 @@
 @import "login.css";
 @import "register.css";
 @import "insert.css";
+@import "list.css";
+@import "admin.css";
+@import "player.css";
+@import "all.css";
 
 *,
 ::before,
@@ -35,17 +39,18 @@ a {
 .wrapper {
     position: relative;
     width: 100%;
-    height: 100vh;
-    background: var(--color-milk);
+    min-height: 100vh;
+    background: var(--color-wraper);
 }
 
 .innerwrap {
     position: relative;
     display: block;
     width: 80%;
-    height: 100%;
+    min-height: 100vh;
     margin: 0 auto;
     padding-top: 7em;
+    background-color: #bdbdbd;
 }
 
 .title {
@@ -53,6 +58,7 @@ a {
     font-size: 2em;
     padding-left: 1em;
     font-family: BalsamiqSans-Bold;
+    width: 100%;
 }
 
 .title a{
@@ -62,7 +68,74 @@ a {
 .contains-music{
     position: relative;
     width: 100%;
+    border-radius: 20px;
+    background-color: #616161;
+    margin-top: 1em;
+    padding-left: 7em;
+}
+
+
+.wrap_item{
+    display: inline-block;
+    transition:   box-shadow 0.2s linear;
+    height: 20em;
+    width: 15em;
+    margin: 2em;
+}
+
+.wrap_item:hover{
+    box-shadow: 7px -4px 0px 1px var(--color-bg-header);
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    width: 4em;
+    height: 1.5em;
+    background-color: var(--color-bg-header);
+    color: var(--color-milk);
+    border-radius: 15px;
+    margin-left: 20em;
+}
+
+.button{
+    display: block;
+    background-color: var(--color-bg-header);
+    color: var(--color-milk);
+    border-radius: 15px;
     text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.2em;
+}
+
+.button .item-list{
+    width: 13em;
+}
+
+ .child-list{
+    text-align: center;
+    font-weight:bold ;
+    color: var(--color-wraper);
+    border-radius: 0px;
+    transition: all 0.5s linear ease;
+}
+
+.child-list:hover{
+    color: var(--color-milk);
+    background-color: black;
+    border-radius: 15px;
+}
+
+.button:hover .item-list{
+display: block;
+}
+
+.item-list{
+    position: absolute;
+    display: none;
+    color: white;
+    z-index: 999;
 }
 
 .item{
@@ -71,17 +144,13 @@ a {
     width: 12em;
     height: 20em;
     flex-direction: column;
-    margin: 1em;
-    transition:   box-shadow 0.2s linear;
-}
-
-.item:hover{
-    box-shadow: 7px -4px 0px 1px var(--color-bg-header);
 }
 
 .poster{
-    flex: 3;
-    width: 100%;
+    flex: 4;
+    width: 180px;
+    height: 180px;
+    
 }
 
 .song{
@@ -90,5 +159,60 @@ a {
     word-wrap: break-word;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-size: 1.5em;
+    width: 180px;   
+}
+
+p.song
+{
+    color: white;
+    text-align: left;
+    font-style: bold;
+}
+
+p.song:hover
+{
+    color: mediumpurple;
+}
+
+p.singer
+{
+    color: white;
+    text-align: left;
+    width: 180px;
+}
+
+.wrapPlaylist
+{
+    padding: 10px;
+    margin-left: 35px;
+}
+
+.wrapPlaylist #namePLaylist
+{
+    width: 27.7em;
+    height: 2.2em;
+    float: left;
+}
+
+.wrapPlaylist .wrapSelect
+{
+    width: 8em;
+    margin-left: 0px;
+    float: left;
+}
+
+.wrapPlaylist .wrapName
+{
+    width: 14em;
+    height: 2.2em;
+    float: left;
+    margin-left: 10px;
+}
+
+.wrapPlaylist .wrapButton
+{
+    margin-left: 30em;
+    margin-top: 5px;
 }
 

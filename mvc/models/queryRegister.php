@@ -7,10 +7,8 @@ class queryRegister extends DB{
         $email= mysqli_real_escape_string($this->conn,$email);
 
         $password=password_hash($password, PASSWORD_DEFAULT);
-        $insertUsername = $this->insertAccount($username,date("Y/m/d")); 
-        $insertPassword= $this->insertPassword($username,$password);
-        $insertEmail= $this->insertEmail($username,$email);
-        if(mysqli_query($this->conn,$insertUsername) && mysqli_query($this->conn,$insertPassword) && mysqli_query($this->conn,$insertEmail)){
+        $insertUsername = $this->insertAccount($username,$password,date("Y/m/d"),$email); 
+        if(mysqli_query($this->conn,$insertUsername)){
             return true;
         }
         else{

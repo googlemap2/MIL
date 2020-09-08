@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link href='./css/main.css' rel='stylesheet'/>
+    <link href='/MIL/css/main.css' rel='stylesheet'/>
 </head>
-
+<?php
+    if(isset($data["error"])){
+        echo "<script>alert('".$data["error"]."')</script>";
+    }
+?>
 <body>
     <div class="wrapper-login">
+     
+        <form action="/MIL/register/excuteRegister" method="post" class="login-contains">
         <img src="/MIL/img/loginIMG.png" class="imgLogin" />
-        <form action="./register/excuteRegister" method="post" class="login-contains">
-            <h2>Login</h2>
+            <h2>Sign Up</h2>
             <span>UserName</span>
             <input type="text" placeholder="Enter UserName" name="username" class="input-fix" require>
             <span>Password <?php echo isset($data['password'])?"<span style='color:red;display: inline;    font-size: 0.8em; font-family: sans-serif;'>".$data['password']."</span>":"" ?></span>
@@ -22,13 +27,14 @@
             <input type="text" placeholder="Enter Email" name="email"class="input-fix"  require>
             <input type="submit" value="Register" name="submitR"  class="submit-login submit-register"/>
             <div class="link link-register">
-                <a href="http://localhost/MIL/home">
+                <a href="/MIL/home">
                     Home
                 </a>
-                <a href="http://localhost/MIL/login">
+                <a href="/MIL/login">
                    Login
                 </a>
             </div>
         </form>
     </div>
-</body></html>
+</body>
+</html>

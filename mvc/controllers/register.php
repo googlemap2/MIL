@@ -43,10 +43,11 @@ class register extends controller{
                 }
                 else{
                     if($this->usemodel->registerUser($this->username,$this->password,$this->email)){
-                        header('location:http://localhost/MIL/login');
+                        $this->_header("login");
                     }
                     else{
-                        $this->view("formRegister");
+                        $this->view("formRegister",["error"=>"Tên tài khoản đã tồn tại"]);
+
                     }
                   
                 }

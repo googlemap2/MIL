@@ -1,0 +1,36 @@
+
+
+.table{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 50em;
+    margin: 0 auto;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.table p{
+    display: block;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.table input[type="submit"]{
+    width: 5em;
+    height: 3em;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.table * {
+    flex: 1;
+}
+
+.category-result{
+    float: right;
+    margin-right: 1em   ;
+}

@@ -38,7 +38,9 @@
             return realpath($_SERVER["DOCUMENT_ROOT"]) . "/MIL/mp3/";
         }
 
-        
+        function pathPoster(){
+            return realpath($_SERVER["DOCUMENT_ROOT"]) . "/MIL/poster/";
+        }
 
     function checkTypeFileIMG($filename)
     {
@@ -57,4 +59,36 @@
         }
         return false;
     }
+
+    function createItemSong($id,$namesong,$poster,$singer){
+        $poster="/MIL/poster/".$poster.".png";
+        return   "  <div class='wrap_item'>
+        <input type='hidden' value='$id'>
+        <a href='/MIL/player' class='item'><img src='$poster' class='poster'>
+        <p class='song'>$namesong</p>
+        <p class='singer'>$singer</p></a>
+        <div class='button'>Insert For Playlist
+        <div class='item-list'>
+        </div>
+        </div>
+        </div> ";
     }
+
+    function createItemAdmin($namesong,$id_song,$id_poster,$id_user,$datepost){
+        return "<form action='/MIL/home/del' method='post' class='table'>
+        <p>$namesong</p>
+        <p>$id_user</p>
+        <p>$datepost</p>
+        <input type='hidden' name='id_song' value='$id_song'>
+        <input type='hidden' name='id_poster' value='$id_poster'>
+        <input type='hidden' name='username' value='$id_user'>
+        <input type='submit' value='Delete' name='del'>
+    </form>";
+        
+    }
+    public function _header($string){
+        $host  = $_SERVER['HTTP_HOST'];
+            $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+            header("Location: http://$host$uri/".$string);
+    }
+}

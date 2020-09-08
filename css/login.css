@@ -13,7 +13,7 @@
 .imgLogin {
     position: absolute;
     width: 12em;
-    top: 12%;
+    top: -9%;
     left: 50%;
     transform: translate(-50%, -12%);
     z-index: 2;
