@@ -1,2 +1,3 @@
 - Bật Xampp-control chạy (Apache, Mysql);
-- Vào http://localhost/phpmyadmin/ tạo database có tên db_mil và import file db_mil.sql trong thư mục sql vào chạy project
+- Vào http://localhost/phpmyadmin/ tạo database có tên db_mil và import file db_mil.sql trong thư mục sql 
+- Vào đường link http://localhost/MIL/home để chạy project.
